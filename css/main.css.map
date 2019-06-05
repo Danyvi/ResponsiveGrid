@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AEAA,OAAO,CAAC,yFAAI",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/modules/_all.scss",
+        "../scss/modules/_typography.scss",
+        "../scss/modules/_colors.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
