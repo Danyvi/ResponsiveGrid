@@ -14,10 +14,11 @@ $fw-b: 900;
 
 // mixin
 @mixin sans-serif 
-($fs, $ls:.3em, $color: $dark-gray, $tt: uppercase, $lh:1) {
+($fs, $ls:.15em, $color: $dark-gray, $tt: uppercase, $lh:1) {
     color: $color;
     font-family: $ff-ss;
     font-size: $fs;
+    font-weight: $fw-n;
     letter-spacing: $ls;
     line-height: $lh;
     text-transform: $tt;
