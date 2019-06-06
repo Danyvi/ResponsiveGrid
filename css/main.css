@@ -342,6 +342,18 @@ template {
   display: none;
 }
 
+.about-me {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+.about-me::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 body {
   background: #FFFFFF;
   color: #A7A7A7;
@@ -480,5 +492,56 @@ h2 {
   min-height: 100%;
   min-width: 100%;
   display: block;
+}
+
+.about-me {
+  margin-top: 3em;
+}
+
+.about-img {
+  max-height: 25em;
+}
+
+@media (min-width: 42em) {
+  .about-img {
+    float: left;
+    margin-right: 1em;
+  }
+}
+
+.about-title {
+  margin-bottom: .25em;
+}
+
+.about-subtitle {
+  margin: 0.5em 0;
+}
+
+@supports (display: grid) {
+  .about-me {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+        grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+  }
+  .about-img {
+    grid-column: port-start/img-end;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .about-title {
+    grid-column: name/port;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  .about-subtitle,
+  .about-text {
+    grid-column: port/port;
+  }
 }
 /*# sourceMappingURL=main.css.map */
